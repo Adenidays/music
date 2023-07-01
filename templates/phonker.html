@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ phonker }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .content {
+            max-width: 500px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .details {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="http://127.0.0.1:8000/">HOME</a>
+    </div>
+
+    <div class="content">
+        <div class="details">
+            <h1>ПОДРОБНОСТИ О МУЗЫКАНТЕ:</h1>
+            <p>{{ phonker }}</p>
+            <p>Возраст: {{ phonker.age }}</p>
+            <p>Награда: {{ phonker.big_award }}</p>
+            <p>Страна: {{ phonker.country }}</p>
+        </div>
+        <div class="description">
+            <p>Описание:</p>
+            <p>{{ phonker.description }}</p>
+        </div>
+    </div>
+</body>
+
+</html>

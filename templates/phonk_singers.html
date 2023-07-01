@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f3f3f3;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .phonk-card {
+            border: 1px solid #dddddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .phonk-card p {
+            margin: 5px 0;
+        }
+
+        .profile-link {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .profile-link:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {% for phonk in phonks %}
+        <div class="phonk-card">
+            <p><strong>{{ phonk }}</strong></p>
+            <p>Age: {{ phonk.age }}</p>
+            <p>Country: {{ phonk.country }}</p>
+            <p>
+                <a href="/phonk_singers/{{ phonker.id }}" class="profile-link">
+                    View Profile
+                </a>
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

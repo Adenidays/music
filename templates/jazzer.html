@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ jazzer }}</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .profile-details {
+            margin-bottom: 10px;
+        }
+
+        .profile-details span {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .profile-link {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .profile-link:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Подробности о музыканте:</h1>
+        <div class="profile-details">
+            <p><span>Имя:</span> {{ jazzer }}</p>
+            <p><span>Возраст:</span> {{ jazzer.age }}</p>
+            <p><span>Награда:</span> {{ jazzer.big_award }}</p>
+            <p><span>Страна:</span> {{ jazzer.country }}</p>
+            <p><span>Описание:</span></p>
+            <p>{{ jazzer.description }}</p>
+        </div>
+        <div class="profile-link">
+            <a href="/rap_singers/{{ jazzer.id }}" style="color: #fff; text-decoration: none;">Перейти к профилю</a>
+        </div>
+    </div>
+</body>
+
+</html>
